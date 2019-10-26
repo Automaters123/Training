@@ -10,7 +10,7 @@ sed '3s/testing/unix/' test123.txt
 
 # replacing globally thorughout file 
 
-sed '3s/testing/unix/g' test123.txt
+sed 's/testing/unix/g' test123.txt
 
 #appending multiple lines through sed
 
