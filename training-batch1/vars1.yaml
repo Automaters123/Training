@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   become: yes
+   tasks:
+      - name: create file
+        file:
+          path: "{{test1_file}}"
+          state: touch
+      

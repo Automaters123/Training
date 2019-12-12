@@ -1,0 +1,12 @@
+[localhost]
+
+localhost
+
+
+[webservers]
+
+client1
+
+[servers]
+localhost ansible_connection=local 
+client1

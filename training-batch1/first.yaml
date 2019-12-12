@@ -1,0 +1,14 @@
+---
+  - hosts: localhost
+    become: yes
+    gather_facts: false
+    tasks:
+      - name: test
+        yum:
+           name: httpd
+           state: present
+           
+      - name: service started
+        service:
+           name: httpd
+           state: started

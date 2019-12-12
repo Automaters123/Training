@@ -1,0 +1,18 @@
+---
+ - hosts: localhost
+   become: yes
+   vars:
+      test1_file: /home/ansible/vars/test1_txt
+   tasks:
+      - name: create file
+        file:
+          path: "{{test1_file}}"
+          state: touch
+      
+      - name: test
+        lineinfile:
+          path: "{{test1_file}}"
+          line: "{{ item }}"
+        with_items:
+          - "{{training}}"
+          - "{{batch}}"
